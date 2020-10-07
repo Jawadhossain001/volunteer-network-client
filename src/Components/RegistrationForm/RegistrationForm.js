@@ -13,8 +13,7 @@ const RegistrationForm = () => {
     const [form, setForm]=useState({eventName:user.event?.name,date:new Date().toDateString(), email:user.email, img:user.event?.img})
     const submitFormHandler=(event)=>{
         event.preventDefault()
-        // fetch('https://volunteer-network-serve.herokuapp.com/submit-form',{
-        fetch('http://localhost:4000/submit-form',{
+        fetch('https://volunteer-network-serve.herokuapp.com/submit-form',{
             method:'POST', 
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(form)
@@ -32,7 +31,7 @@ const RegistrationForm = () => {
             <div  style={{width:"200px", margin:'auto', padding:'20px'}}>
                 <img style={{height:'50px'}} src={logo} alt=""/>
             </div>
-            <form>
+            <form onSubmit={submitFormHandler}>
             <FormGroup style={{width:'370px', margin:'auto',padding:'30px',
                     border:'1px solid lightgray', borderRadius:'5px'}}>
                 <h3 style={{marginTop:'0'}}>Register as a Volunteer</h3>
@@ -60,7 +59,7 @@ const RegistrationForm = () => {
 
                 
                 <button type='submit' style={{marginTop:'20px', borderRadius:'5px'}} 
-                    className="blue-button" onSubmit={submitFormHandler}>
+                    className="blue-button">
                     Registration
                 </button>
 

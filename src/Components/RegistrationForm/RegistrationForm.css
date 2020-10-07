@@ -5,6 +5,7 @@
     border-radius: 10px;
     margin: 50px auto;
     background-color: #e0e9ec;
-    background-image: url(../../images/logo.png);
-    background-repeat: no-repeat;
+}
+.register-form {
+    margin-top: 100px;
 }

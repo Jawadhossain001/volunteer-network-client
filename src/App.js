@@ -15,32 +15,25 @@ function App() {
   return (
     <UserContext.Provider value={[user, setUser]}>
       <Router>
-
         <Switch>
           <Route exact path='/'>
             <Home />
           </Route>
-
           <Route path='/login'>
             <Login />
           </Route>
-
           <PrivateRoute path='/registration-form'>
             <RegistrationForm />
           </PrivateRoute>
-
           <PrivateRoute path='/events'>
             <Events />
           </PrivateRoute>
-
           <PrivateRoute path='/admin-panel'>
             <AdminPanel />
           </PrivateRoute>
-
           <Route path='*'>
             <NotMatch />
           </Route>
-
         </Switch>
       </Router>
     </UserContext.Provider>

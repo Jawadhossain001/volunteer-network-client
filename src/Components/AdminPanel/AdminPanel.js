@@ -47,16 +47,16 @@ const AdminPanel = () => {
     
     useEffect(()=>{
         
-            // fetch('https://volunteer-network-serve.herokuapp.com/all-registered-events')
-            fetch('http://localhost:4000/all-registered-events')
+            fetch('https://volunteer-network-serv.herokuapp.com/all-registered-events')
+            // fetch('http://localhost:4000/all-registered-events')
             .then(res=>res.json())
             .then(result=>setAllEvents(result))
        
     },[])
 
     const eventDeleteHandler=(id)=>{
-        // fetch('https://volunteer-network-serve.herokuapp.com/cancel-event',{
-        fetch('http://localhost:4000/cancel-event',{
+        fetch('https://volunteer-network-serv.herokuapp.com/cancel-event',{
+        // fetch('http://localhost:4000/cancel-event',{
             method:'DELETE',
             headers:{
                 'Content-Type':'application/json',

@@ -7,8 +7,7 @@ import './Home.css';
 const Home = () => {
     const [volunteers, setVolunteers] = useState([])
     useEffect(() => {
-        // fetch('https://volunteer-network-serve.herokuapp.com/show-volunteers')
-        fetch('http://localhost:4000/show-volunteers')
+        fetch('https://volunteer-network-serv.herokuapp.com/show-volunteers')
             .then(res => res.json())
             .then(result => {
                 setVolunteers(result)
@@ -28,7 +27,7 @@ const Home = () => {
                     <Grid container item xs={12} spacing='5' justify='center' style={{ textAlign: 'center', margin: 'auto' }}>
                         {
                             volunteers.map(event => {
-                                let colors = ['#3F90FC', '#FFBD3E', '#FF7044', '#cc6fb5e0'];
+                                let colors = ['#FFBD3E', '#3F90FC', '#FF7044', '#cc6fb5e0'];
                                 const random = Math.floor(Math.random() * 4)
                                 return (
                                     <Grid item xs={12} sm={6} md={3} key={event._id}>
