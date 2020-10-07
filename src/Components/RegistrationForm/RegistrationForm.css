@@ -1,0 +1,10 @@
+.registration {
+    width: 800px;
+    height: 800px;
+    border: 1px solid #e0e9ec;
+    border-radius: 10px;
+    margin: 50px auto;
+    background-color: #e0e9ec;
+    background-image: url(../../images/logo.png);
+    background-repeat: no-repeat;
+}

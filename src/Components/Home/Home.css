@@ -1,0 +1,28 @@
+.home {
+    background: linear-gradient(to bottom,
+        rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+    url(../../images/background.jpg);
+    height: '496px';
+}
+
+.search-container {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.search-input {
+    padding: 10px;
+    padding-right: 80px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.search-btn {
+    padding: 10px 28px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background-color: #00abf1;
+    color: #fff;
+    border: 1px solid #00abf1;
+}
